@@ -10,21 +10,21 @@ $(document).ready(function() {
 
 		let seconds = currentTime.getSeconds();
 
-		let meridiem = "AM";
+		let meridiem = "AM"; // Default is AM
 
 		if (seconds < 10) {
 
 			seconds = "0" + seconds;
 
 		}
-
+		
 		if (minutes < 10) {
 
 			minutes = "0" + minutes;
 
 		}
 
-
+		// If hours is greater than 12
 		if (hours > 12) {
 
 			hours = hours - 12;
