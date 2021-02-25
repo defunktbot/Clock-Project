@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 		let seconds = currentTime.getSeconds();
 
-		let clockDiv =  document.getElementById('clock');
+		let meridiem = "AM";
 
 		if (seconds < 10) {
 
@@ -18,7 +18,12 @@ $(document).ready(function() {
 
 		}
 
-		let meiridiem = "AM";
+		if (minutes < 10) {
+
+			minutes = "0" + minutes;
+
+		}
+
 
 		if (hours > 12) {
 
@@ -34,7 +39,10 @@ $(document).ready(function() {
 
 		}
 
+		let clockDiv =  document.getElementById('clock');
+
 		clockDiv.innerText = hours + ":" + minutes + ":" + seconds + meridiem;
+
 
 	}
 
